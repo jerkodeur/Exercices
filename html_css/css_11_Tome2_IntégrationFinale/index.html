@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Jerkoder">
+	<!-- Required bootstrap CSS -->
+	<meta name="description" content="The site of Sauron makes with Bootstrap's features">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- ********************** -->
+	<link rel="stylesheet" href="style.css">
+	<title>FindThePrecious.com</title>
+</head>
+
+<body>
+	<header class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand disabled" href="#"><img src="images/logo.png" alt="FindMyPrecious.com"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link text-white" href="#fellows" title="Go to the fellows wanted section">Fellows<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link text-white" href="#contact" title="Go to the form contact">Contact us</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section id="carousel">
+		<div id="carousel_bootstrap" class="carousel slide d-none d-md-block" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="d-flex carousel-item active ">
+					<img src="images/dark_vador.jpg" class="d-block w-100 position-relative" alt="A background with Dark Vador face" />
+				</div>
+				<div class="carousel-caption d-none d-md-block position-absolute">
+					<h2>Sauron is a very good Bro,</h2>
+					<h5>please help him to find the ring !          - d.v.</h5>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carousel_bootstrap" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon d-none d-sm-none d-md-block" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carousel_bootstrap" role="button" data-slide="next">
+				<span class="carousel-control-next-icon d-none d-sm-none d-md-block" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</section>
+	<main id="main" class="container-fluid">
+		<h4 class="col-md-12 titleP"><span class="mistStyle">ij </span>Fellows wanted dead <span class="smallText">(or
+				alive if you want to eat them later)</span><span class="mistStyle"> ij</span></h4>
+		<section id="fellows">
+			<div class="cards row justify-content-center">
+				<div class="card-deck">
+					<div class="card text-white">
+						<img src="images/gandalf.png" class="card-img-top"
+							alt="He is the wizard, and looks very serene with his long beard and his hat" />
+						<div class="card-img-overlay">
+							<h5 class="card-title">Reward <span class="fellowsMist">1000</span> gold coins</h5>
+							<p class="card-text">Gandalf</p>
+						</div>
+						<div class="card-body">
+							<h6 class="card-title">a very dangerous wizard balrog killer ...</h6>
+						</div>
+					</div>
+					<div class="card text-white">
+						<img src="images/aragorn.png" class="card-img-top" alt="A hobbit, he his looking a parchment and looks very cultured" />
+						<div class="card-img-overlay">
+							<h5 class="card-title">Reward <span class="fellowsMist">800</span> gold coins</h5>
+							<p class="card-text">aragord</p>
+						</div>
+						<div class="card-body">
+							<h6 class="card-title">sauron's Singer says him his sword is dangerous</h6>
+						</div>
+					</div>
+					<div class="card bg-dark text-white">
+						<img src="images/gimli.png" class="card-img-top"
+							alt="A Yummy Dwarf with a long red beard. He has an axe between his hands" />
+						<div class="card-img-overlay">
+							<span class="card-title"><span class="fellowsMist">dead</span></span>
+							<p class="card-text">gimli</p>
+						</div>
+						<div class="card-body">
+							<h6 class="card-title">a dwarf wich a beard and an axe... </h6>
+						</div>
+					</div>
+					</div>
+			</div>
+		</section>
+	</main>
+	<section id="contact" class="container-fluid">
+		<h4 class="contact titleP"><span class="mistStyle">ij </span>Contact us<span class="mistStyle"> ij</span></h4>
+		<form class="row justify-content-center">
+			<div class="flexContact">
+				<div class="groupForm">
+					<div class="form-group">
+						<label for="mail"></label>
+						<input id="mail" class="form-control" type="email" name="user_mail" placeholder="@">
+					</div>
+					<div class="form-group">
+						<label for="username"></label>
+						<input id="username" class="form-control" type="text" name="user_name" placeholder="Adress">
+					</div>
+					<div class="form-group">
+						<label for="object"> </label>
+						<select id="object" name="user_object" class="form-control" disabled>
+							<option class="form-control" value="seen" selected>I have seen one of them</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="message"> </label>
+						<textarea class="form-control" id="message" name="user_message"
+							rows="5">Your message to the master</textarea>
+					</div>
+				</div>
+				<div class="map">
+					<img src="images/map.png" alt="">
+				</div>
+			</div>
+		</form>
+	</section>
+		<footer class="container-fluid" id="footer">
+			<nav class="navbar navbar-expand-lg">
+				<ul class="nav nav-pills">
+					<li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+					<li class="nav-item"><a class="nav-link" href="#fellows" title="Go to the fellows wanted section">Fellows</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Join our army</a></li>
+				</ul>
+				<ul class="nav nav-pills">
+					<li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Reward conditions</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Legal mentions</a></li>
+				</ul>
+				<ul class="nav nav-pills">
+					<li class="nav-item"><a class="nav-link" href="#">Sauron4Ever.com</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Follow him also on twitter</a></li>
+				</ul>
+			</nav>
+		</footer>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<!-- *********************************************** -->
+</body>
+
+</html>
