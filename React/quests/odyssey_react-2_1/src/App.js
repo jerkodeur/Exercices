@@ -1,11 +1,13 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import QuoteForm from './components/QuoteForm'
 import QuoteList from './components/QuoteList'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <QuoteForm />
       <QuoteList />
     </div>
   );
