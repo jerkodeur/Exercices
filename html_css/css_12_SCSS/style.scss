@@ -15,56 +15,62 @@ main {
 }
 
 .bloc {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 	margin: 3em auto;
+	text-align:center;
 	&:nth-last-child {
 		margin-bottom: 0;
 	}
-	text-align:center;
-	position:relative;
 }
 
-@mixin ring ($color, $size, $border) {
-	@if $color==#353534 {
-		position: relative;
-		@for $i from 1 to 7 {
-			&:nth-of-type(1n + #{$i}) {
-				position: relative;
-				border-width: $border * $i;
-				width: $size * $i;
-				height: $size * $i;
-				left: 100px;
-			}
-		}
-	}
-	border-radius:50%;
-	border:$border solid $color;
-	width: $size;
-	height: $size;
-	margin:0 .5em 0;
-	@if $border>.2em {
-		box-shadow: .2em .2em .3em #d7b114;
-	}
+.jo {
+  text-align:center;
+  vertical-align: middle;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  margin-left:3em;
+  margin-bottom:1.5em;
 }
 
+ @mixin ring ($color, $size, $border) {
+
+    border-radius:50%;
+    border:$border solid $color;
+    width: $size;
+    height: $size;
+    margin:0 .5em 0;
+
+    @if $color == #353534 {
+      @for $i from 1 to 7 {
+        &:nth-of-type(n + #{$i}) {
+          border-width: $border * (1 + (0.08 * $i));
+          width: $size * (1 + (0.3 * $i));
+          height: $size * (1 + (0.3 * $i));
+          margin-left: -1.7em;
+        }
+      }
+    }
+
+    @if $border > .2em {
+      box-shadow:.2em .2em .3em darken($color,15%);
+    }
+  }
 .orangeRing {
-	@include ring(#ff5f01, 2em, .2em);
+  @include ring(#ff5f01,2.5em,.2em);
 }
-
 .yellowRing {
-	@include ring(#fccb06, 7em, .6em);
+  @include ring(#fccb06,7em,.6em);
 }
-
 .greyRing {
-	@include ring(#353534, 1em, .1em)
+  @include ring(#353534,2em,.3em)
 }
 
-h2 {
-	text-align: center;
+h1 {
+  text-align:center;
 }
-
 nav {
 	background: #fe661d;
 	color: #FFF;
