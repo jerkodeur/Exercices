@@ -1,0 +1,68 @@
+@import "libs/fonts";
+@import "libs/responsive";
+@import "libs/colors";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/variables";
+
+*, html, ::before, ::after {
+  font-size: $base-font-size;
+  font-family:$fontPortLligatSans;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: .25em;
+}
+
+.container {
+  display:grid;
+
+  &.header {
+    background-color: $grey-light;
+    grid-template: auto / 1fr 165px;
+    grid-template-areas:
+      "ref img";
+  }
+  &.ref {
+    grid-template: 1fr 1fr 1.5fr/ 1fr 60%;
+    grid-template-areas:
+      "identity identity"
+      "title title"
+      "null contact";
+  }
+}
+
+.item {
+    padding: .1em;
+
+    &.identity {
+      grid-area: identity;
+      font-size: 2.5em;
+      letter-spacing: 4px;
+      background-color: $yellow;
+      padding-left: 1em;
+    }
+    &.title {
+      grid-area: title;
+      font-size: 1.5em;
+      background-color: $red;
+      padding-left: 4em;
+    }
+    &.contact {
+      grid-area:contact;
+      font-size: 1.2em;
+      padding-top: .25em;
+      list-style-type: square;
+    }
+  }
+
+
+.item.img {
+    grid-area: img;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+}
