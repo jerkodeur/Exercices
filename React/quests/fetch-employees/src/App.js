@@ -29,7 +29,6 @@ class App extends React.Component {
       employee: sampleEmployee
     }
     this.getEmployee = this.getEmployee.bind(this);
-
   }
 
   getEmployee() {
