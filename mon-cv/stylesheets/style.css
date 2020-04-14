@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Trykker:regular);
+@import url(https://fonts.googleapis.com/css?family=Port+Lligat+Sans:regular);
+/* line 8, ../sass/style.scss */
+*, html, ::before, ::after {
+  font-size: 16px;
+  font-family: "Port Lligat Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../sass/style.scss */
+body {
+  margin: .25em;
+}
+
+/* line 20, ../sass/style.scss */
+.container {
+  display: grid;
+}
+
+/* line 24, ../sass/style.scss */
+.header {
+  width: 90%;
+  margin: auto;
+  padding: .1em;
+  grid-template: auto / 2fr 6fr 165px;
+  grid-template-areas: "identity identity img" "skills title img" "skills contact img";
+  background-color: #c7c7c7;
+  border: 1px dotted #000;
+}
+/* line 35, ../sass/style.scss */
+.header .identity {
+  grid-area: identity;
+  font-size: 2.5em;
+  letter-spacing: 4px;
+  background-color: orange;
+  padding: .15em;
+}
+/* line 42, ../sass/style.scss */
+.header .title {
+  grid-area: title;
+  text-align: justify;
+  font-size: 1.5em;
+  background-color: orange;
+  padding-left: 2em;
+}
+/* line 49, ../sass/style.scss */
+.header .skills {
+  grid-area: skills;
+  text-align: center;
+  background-color: #20915c;
+}
+/* line 54, ../sass/style.scss */
+.header .contact {
+  grid-area: contact;
+  padding: .1em;
+  margin-left: 1.5em;
+  justify-self: center;
+}
+/* line 59, ../sass/style.scss */
+.header .contact li {
+  font-size: 1.2em;
+  padding-top: .25em;
+  list-style-type: square;
+}
+/* line 13, ../sass/libs/mixins.scss */
+.header .contact li.tel {
+  margin-left: 0em;
+}
+/* line 13, ../sass/libs/mixins.scss */
+.header .contact li.github {
+  margin-left: 2em;
+}
+/* line 13, ../sass/libs/mixins.scss */
+.header .contact li.email {
+  margin-left: 4em;
+}
+/* line 13, ../sass/libs/mixins.scss */
+.header .contact li.linkedin {
+  margin-left: 6em;
+}
+/* line 67, ../sass/style.scss */
+.header .img {
+  grid-area: img;
+  align-self: center;
+  justify-self: center;
+  border-radius: 50%;
+}
+
+/* line 75, ../sass/style.scss */
+.main {
+  width: 90%;
+  margin: auto;
+  background-color: #457ea3;
+  grid-area: main;
+  grid-template: auto / 2fr 6fr 165px;
+  grid-template-areas: "main-left main-right main-right";
+}
+/* line 83, ../sass/style.scss */
+.main .main-left {
+  grid-area: main-left;
+  grid-template-areas: "assets" "tools" "languages" "interests";
+  background-color: #20915c;
+  grid-auto-rows: max-content;
+}
+/* line 3, ../sass/libs/mixins.scss */
+.main .main-left.assets {
+  grid-area: "assets";
+}
+/* line 3, ../sass/libs/mixins.scss */
+.main .main-left.tools {
+  grid-area: "tools";
+}
+/* line 3, ../sass/libs/mixins.scss */
+.main .main-left.languages {
+  grid-area: "languages";
+}
+/* line 3, ../sass/libs/mixins.scss */
+.main .main-left.interests {
+  grid-area: "interests";
+}
+/* line 94, ../sass/style.scss */
+.main .main-left h3 {
+  text-align: center;
+}
+/* line 97, ../sass/style.scss */
+.main .main-left ul {
+  list-style-position: inside;
+  margin-left: .5em;
+}
+/* line 102, ../sass/style.scss */
+.main .main-right {
+  padding: .5em;
+  grid-area: main-right;
+  grid-template: auto/minmax(auto, 100%);
+  grid-template-areas: "description" "carrier new" "formations" "projects" "courses" "carrier old" "experiences" "diplomas";
+  background-color: #56358b;
+}
+/* line 116, ../sass/style.scss */
+.main .main-right .left {
+  padding-left: .5em;
+  width: 80%;
+  justify-self: left;
+}
+/* line 121, ../sass/style.scss */
+.main .main-right .center {
+  text-align: center;
+  width: 80%;
+  justify-self: center;
+}
+/* line 126, ../sass/style.scss */
+.main .main-right .right {
+  text-align: right;
+  padding-right: .5em;
+  width: 80%;
+  justify-self: right;
+}
