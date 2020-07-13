@@ -1,0 +1,33 @@
+
+### GET sans filtrage
+GET https://http-practice.herokuapp.com/wilders
+
+### GET avec les paramètres page et langage
+GET https://http-practice.herokuapp.com/wilders?page=1&language=JavaScript
+
+### POST Wilder en url-encoded
+POST https://http-practice.herokuapp.com/wilders
+Content-Type: application/x-www-form-urlencoded
+
+name=Jerome%20Potie&language=JavaScript
+
+### POST Wilder en json
+POST https://http-practice.herokuapp.com/wilders
+Content-Type: application/json
+
+{
+  "name" : "Jean-Philippe",
+  "language" : "PHP"
+}
+
+### GET Moi dans la db !
+GET https://http-practice.herokuapp.com/wilders/2329
+
+### PUT Modifier le wilder Jean-Philippe
+PUT https://http-practice.herokuapp.com/wilders/2335
+Content-Type: application/x-www-form-urlencoded
+
+language=JavaScript
+
+### DELETE le wilder Jean-Philippe
+DELETE https://http-practice.herokuapp.com/wilders/2335
